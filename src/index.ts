@@ -1,13 +1,6 @@
-import { Hero } from "./classes/Hero";
-// import { Hero as SuperHero, Hero2 } from "./classes/Hero";
-// import * as HeroClass from "./classes/Hero";
+import { getPokemon } from "./generics/get-pokemon";
 
-const ironman = new Hero( 'Ironman', 1, 55 );
-
-console.log( ironman );
-console.log( ironman.power );
-
-
-
-
-
+getPokemon(4)
+    .then(pokemon => console.log( pokemon.sprites.front_shiny ) )
+    .catch( error => console.error(error) )
+    .finally( () => console.log( 'Fin de getPokemon' ))
